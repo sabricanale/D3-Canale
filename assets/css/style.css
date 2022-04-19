@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor{
+    display: grid;  /*divide la página en regiones*/
+    gap:10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 200px auto auto;
+    grid-template-areas: "nav     nav    nav"
+                          "header header header"
+                          "main   main   main"
+                          "footer footer footer";
+                          
+
+}
+
+.navegador{
+    grid-area: nav;
+    display: flex;
+    justify-content:space-around;
+    align-items: flex-end;
+    font-family: "Josefin Sans";
+}
+
+.logo{
+    width: 50%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: flex-start;
+
+}
+
+.imgLogo{
+    height: 90px;
+}
+
+.navegador ul{
+    list-style: none;
+    display: flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+.navegador ul li{
+    display:inline-block;
+    font-size: 16px;
+    color:white;
+    padding: 10px;
+   
+} 
+
+.encabezado{
+    grid-area: header;
+    display: flex;
+    background-color: rgb(217, 236, 223);
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+
+}
+
+.titulo{
+    width: 600px;
+    font-family: "Josefin Sans";
+}
+
+.parrafo{
+
+width: 550px;
+font-family: "Josefin Sans";
+
+}
+
+.btn{
+    width: 100px;
+    background-color: rgb(179, 128, 137);
+    color: white;
+    border: 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Josefin Sans";
+}
+
+
+.principal{
+    grid-area: main;
+    display:flex;
+    padding: 50px;
+    font-family: "Josefin Sans";
+
+ }
+
+.imagenAbogada{
+    
+    display: flex;
+    justify-content:center;
+    align-items: flex-end;
+    height: 400px;
+    margin: 6px;
+    padding: 60px;
+    
+  
+    
+}
+
+.infoImagen{
+    margin: 6px;
+    padding: 60px ;
+    justify-content:flex-start;
+    align-items: center;
+
+
+
+}
+
+.PieDePagina{
+    grid-area: footer;
+    display: inline;
+    margin: 10px;
+    padding: 50px;
+    background-color:rgb(179, 128, 137);
+    font-family: "Josefin Sans";
+    
+}
+
+@media (min-width:600px)
+
+{
+    .contenedor{
+        grid-template-rows: 100px 200px auto auto;
+    }
+
+    .logo{
+        width: auto;
+    }
+
+    .encabezado{
+        flex-direction: row;
+        align-items: center;
+    }
+    .principal{
+        flex-direction: row;
+        align-items: center;
+        
+    }
+
+    .imagenAbogada{
+        height: 200px;
+    }
+
+    .PieDePagina{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 30px;
+        margin: 5px;
+    }
+
+}
+
+
+
+
+
+
+
+
