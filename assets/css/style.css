@@ -12,8 +12,6 @@
                           "header header header"
                           "main   main   main"
                           "footer footer footer";
-                          
-
 }
 
 .navegador{
@@ -60,7 +58,6 @@
     justify-content: center;
     align-items: center;
     color: black;
-
 }
 
 .titulo{
@@ -69,10 +66,8 @@
 }
 
 .parrafo{
-
 width: 550px;
 font-family: "Josefin Sans";
-
 }
 
 .btn{
@@ -88,26 +83,20 @@ font-family: "Josefin Sans";
     font-family: "Josefin Sans";
 }
 
-
 .principal{
     grid-area: main;
     display:flex;
     padding: 50px;
     font-family: "Josefin Sans";
-
  }
 
 .imagenAbogada{
-    
     display: flex;
     justify-content:center;
     align-items: flex-end;
     height: 400px;
     margin: 6px;
-    padding: 60px;
-    
-  
-    
+    padding: 60px;    
 }
 
 .infoImagen{
@@ -115,54 +104,58 @@ font-family: "Josefin Sans";
     padding: 60px ;
     justify-content:flex-start;
     align-items: center;
-
-
-
 }
 
 .PieDePagina{
     grid-area: footer;
-    display: inline;
+    display: flex;
+    justify-content: center;
     margin: 10px;
     padding: 50px;
     background-color:rgb(179, 128, 137);
     font-family: "Josefin Sans";
-    
 }
 
-@media (min-width:600px)
+@media only screen and (min-width: 0px) and (max-width:767px)
 
 {
     .contenedor{
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 100px 200px auto auto;
+        grid-template-areas: "nav    nav"
+                             "header header"
+                             "main   main"
+                             "footer footer";
     }
-
+    .navegador{
+        flex-direction: column;
+    }
     .logo{
         width: auto;
     }
-
+    .navegador ul li{
+        display:block;
+              
+    }
     .encabezado{
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
     }
     .principal{
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         
     }
-
     .imagenAbogada{
         height: 200px;
     }
-
     .PieDePagina{
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-around;
         align-items: center;
         padding: 30px;
         margin: 5px;
     }
-
 }
 
 
